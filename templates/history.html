@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('history') }}">
+    <div class="form-group">
+        <label for="brand_name_filter">Filter by Brand Name:</label>
+        <select name="brand_name_filter" id="brand_name_filter" class="form-control" style="width: 200px;">
+            <option value="">-- Select Brand --</option>
+            <option value="TVS">TVS</option>
+            <option value="Royal Enfield">Royal Enfield</option>
+            <option value="Triumph">Triumph</option>
+            <option value="Yamaha">Yamaha</option>
+            <option value="Honda">Honda</option>
+            <option value="Hero">Hero</option>
+            <option value="Bajaj">Bajaj</option>
+            <option value="Suzuki">Suzuki</option>
+            
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+    <a href="{{ url_for('history') }}" class="btn btn-secondary">Clear Filter</a>
+</form>
+</body>
+</html>
+<!-- </html>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Prediction History</h2>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Owner Name</th>
+                    <th>Brand Name</th>
+                    <th>Kms Driven</th>
+                    <th>Age of Bike</th>
+                    <th>Power</th>
+                    <th>Prediction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in historical_data %}
+                <tr>
+                    <td>{{ record['id'] }}</td>
+                    <td>{{ record['owner_name'] }}</td>
+                    <td>{{ record['brand_name'] }}</td>
+                    <td>{{ record['kms_driven_bike'] }}</td>
+                    <td>{{ record['age_bike'] }}</td>
+                    <td>{{ record['power_bike'] }}</td>
+                    <td>{{ record['prediction'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html> --> -->
+<form method="POST" action="{{ url_for('history') }}">
+    <div class="form-group">
+        <label for="brand_name_filter">Filter by Brand Name:</label>
+        <select name="brand_name_filter" id="brand_name_filter" class="form-control" style="width: 200px;">
+            <option value="">-- Select Brand --</option>
+            <option value="TVS">TVS</option>
+            <option value="Royal Enfield">Royal Enfield</option>
+            <option value="Triumph">Triumph</option>
+            <option value="Yamaha">Yamaha</option>
+            <option value="Honda">Honda</option>
+            <option value="Hero">Hero</option>
+            <option value="Bajaj">Bajaj</option>
+            <option value="Suzuki">Suzuki</option>
+            
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+    <a href="{{ url_for('history') }}" class="btn btn-secondary">Clear Filter</a>
+</form>
